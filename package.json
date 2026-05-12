@@ -1,0 +1,29 @@
+{
+  "name": "cse340-course",
+  "version": "1.0.0",
+  "description": "course",
+  "homepage": "https://github.com/martingerardoc/cse340-course#readme",
+  "bugs": {
+    "url": "https://github.com/martingerardoc/cse340-course/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martingerardoc/cse340-course.git"
+  },
+  "license": "ISC",
+  "author": "Martin Cespedes",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
