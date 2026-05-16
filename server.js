@@ -61,13 +61,20 @@ app.get('/categories', async (req, res) => {
 
 
 app.listen(PORT, async () => {
-  try {
-    await testConnection();
-    console.log(`Server is running at http://127.0.0.1:${PORT}`);
-    console.log(`Environment: ${NODE_ENV}`);
-  } catch (error) {
-    console.error('Error connecting to the database:', error);
-    process.exit(1); // Exit with a failure code
-  }
+    console.log('Server startup initiated...');
+
+    try {
+        console.log('Testing database connection...');
+
+        await testConnection();
+
+        console.log(`Server running on port ${PORT}`);
+        console.log(`Environment: ${NODE_ENV}`);
+    } catch (error) {
+        console.error('FULL STARTUP ERROR:');
+        console.error(error);
+
+        process.exit(1);
+    }
 });
 
